@@ -8,6 +8,11 @@
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
+        },
+        "schematics": {
+          "@schematics/angular:component": {
+            "skipTests": true
+          }
         }
       },
       "root": "",
@@ -27,6 +32,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
