@@ -1,0 +1,11 @@
+<app-menu (contentToggled) = "onContentToggled($event)"></app-menu>
+<div 
+    [ngSwitch]="currentContent"
+>
+    <app-home *ngSwitchCase="'home'"></app-home>
+    <app-geral *ngSwitchCase="'geral'">Geral</app-geral>
+    <app-fresamento *ngSwitchCase = "'fresamento'">Fresamento</app-fresamento>
+    <app-torneamento *ngSwitchCase = "'torneamento'">Torneamento</app-torneamento>
+    <app-rosqueamento *ngSwitchCase = "'rosqueamento'">Rosqueamento</app-rosqueamento>
+    <div *ngSwitchDefault></div>
+</div>

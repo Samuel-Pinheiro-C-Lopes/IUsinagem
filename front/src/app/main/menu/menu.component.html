@@ -1,0 +1,106 @@
+<nav 
+    class="menunav"
+    [ngClass] = "{is_active: menuOpened}"
+>
+    <button (click) = "onToggleContent('geral')">Geral</button>
+    <button (click) = "onToggleContent('fresamento')">Fresamento</button>
+    <button (click) = "onToggleContent('torneamento')">Torneamento</button>
+    <button (click) = "onToggleContent('rosqueamento')">Rosqueamento</button>
+</nav>
+<button 
+    class="hamburguer_menu"
+    (click)="menuOpened= !menuOpened"
+    [ngClass]="{is_active: menuOpened}"
+>
+    <div class="bar"></div>
+</button>
+<hr>
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="row">
+    <div 
+        class="menu_col col-xs-2"
+        [ngClass]="{is_active: menuOpened}"
+    >
+        <div 
+            class="menu-options"
+            [ngClass] = "{is_active: menuOpened}"
+        >
+            <div
+            class="hamburguer-menu"
+            (click) = "menuOpened = !menuOpened"
+            [ngClass] = "{is_active: menuOpened === true}"
+            >
+                <div class="bar"></div>
+            </div>
+            <p>Geral</p>
+            <p>Fresamento</p>
+            <p>Torneamento</p>
+            <p>Rosquemento</p>
+        </div>
+    </div>
+    <div class="col-xs-10">
+        <h4 class="page-title">IUsinagem</h4>
+        <small class="text-muted"> Cálculos de Fresamento, Torneamento, Rosqueamento e mais! Tudo em uma só aplicação.</small>
+    </div>
+</div> -->
+
+
+<!-- 
+<button 
+    class="hamburguer-menu"
+    (click)="menuOpened = !menuOpened"
+    [ngClass]="{is_active: menuOpened === true}">
+        <div class="bar"></div>
+</button>
+
+<nav 
+    class="mobile-nav"
+    [ngClass]="{is_active: menuOpened}"
+>
+    <a
+        class="topic" 
+        (click)="testChanger(0)"
+    >Fresamento</a>
+    <a
+        class="topic" 
+        (click)="testChanger(1)"
+    >Torneamento</a>
+    <a
+        class="topic" 
+        (click)="testChanger(2)"
+    >Rosqueamento</a>
+    <a
+        class="topic" 
+        (click)="testChanger(3)"
+    >Geral</a>
+</nav>
+<p *ngIf="test[1]">aaaaaaaa</p> 
+-->
+
+<!-- <nav>
+    <ol>
+        <button 
+            style="cursor:pointer; user-select: none;"
+            *ngFor="let item of menuTopics"
+            (click)="topicActiveChanger()"
+        >{{item}}</button>
+    </ol>
+    <p (click) = "topicActiveChanger()">{{menuTopicsActive}}</p>
+</nav> -->
+
+<!-- <button
+    class ="btn btn-default"
+    (click) ="showMenu = !showMenu"
+>I'm a test button</button>
+<div *ngIf = "showMenu">
+    <p>I'm working... I guess</p>
+</div> -->
