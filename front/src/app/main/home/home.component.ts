@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: "app-home",
@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
     styleUrls: ["home.component.css"],
 })
 export class HomeComponent {
-    
+
+    @Output() displayChanged = new EventEmitter<{newDisplay:string}>()
+
+    onDisplayChange(displayInput:string) {
+        this.displayChanged.emit({
+            newDisplay: displayInput
+        })
+    }
 }

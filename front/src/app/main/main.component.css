@@ -1,0 +1,38 @@
+    
+@media only screen and (max-width: 550px) {
+    hr {
+        position: relative; 
+        padding-top: 40px; 
+        top: 40px
+    }   
+}
+
+
+
+#transition {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height:100vh;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    z-index: 110;
+    transition: all 2s;
+    display: none;
+}
+
+#transition.is_active {
+    display: block;
+    transition: all 2s;
+}
+
+#transition #box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 20%;
+    background-color: white;
+    width: 50%;
+    padding: 20px 40px 15px 40px;
+}

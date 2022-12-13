@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { MatSelect } from "@angular/material/select";
 
 @Component({
     selector: "app-main",
@@ -8,10 +9,16 @@ import { Component } from "@angular/core";
 export class MainComponent {
     contentType:number = 2;
 
-    currentContent:string = 'fresamento';
+    selected:string = "h1"
+
+    currentDisplay:string = 'home';
 
     onContentToggled(text: { textContent: string }) {
-        this.currentContent = text.textContent;
+        this.currentDisplay = text.textContent;
+    }
+
+    onDisplayChanged(display: {newDisplay: string}) {
+        this.currentDisplay = display.newDisplay;
     }
 
 }

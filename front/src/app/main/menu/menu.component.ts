@@ -19,9 +19,9 @@ export class MenuComponent {
 
     @Output() contentToggled = new EventEmitter<{textContent: string}>();
 
-    onToggleContent(textContent: string) {
+    onToggleContent(textContentInput: string) {
         this.contentToggled.emit({
-            textContent: textContent
+            textContent: textContentInput
         })
     }
 

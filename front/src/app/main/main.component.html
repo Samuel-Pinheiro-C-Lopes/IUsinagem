@@ -1,4 +1,4 @@
-<app-menu (contentToggled) = "onContentToggled($event)"></app-menu>
+<!-- <app-menu (contentToggled) = "onContentToggled($event)"></app-menu>
 <div 
     [ngSwitch]="currentContent"
 >
@@ -8,4 +8,28 @@
     <app-torneamento *ngSwitchCase = "'torneamento'">Torneamento</app-torneamento>
     <app-rosqueamento *ngSwitchCase = "'rosqueamento'">Rosqueamento</app-rosqueamento>
     <div *ngSwitchDefault></div>
+</div> -->
+
+<app-home
+    (displayChanged) = "onDisplayChanged($event)"
+    *ngIf = "currentDisplay === 'home' || currentDisplay === 'transition'"
+></app-home>
+<div 
+    id="transition"
+    *ngIf = "currentDisplay === 'transition'"
+    [ngClass] = "{is_active: 'currentDisplay === `transition`'}"
+>
+    <div id="box">
+        <p>I'm working</p>
+        <input type="text" class=" form-control"/>
+        <mat-form-field>
+            <mat-label>Testing</mat-label>
+            <mat-select [(value)] = "selected">
+                <mat-option [value] = "'aa'">Option I</mat-option>
+                <mat-option [value] = "'bb'">II Option</mat-option>
+                <mat-option [value] = "'cc'">Opt III ion</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button>I'm a test button, whose relevance isn't precise or meaningful.</button>
+    </div>
 </div>

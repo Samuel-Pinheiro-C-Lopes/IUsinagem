@@ -1,0 +1,22 @@
+.start-btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(52, 212, 52);
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    transition: all 1s;
+    margin: 20px 0 20px 0;
+}
+
+.start-btn:hover {
+    background-color: rgb(43, 139, 43);
+}
+
+.muted-text {
+    opacity: 85%;
+    color: gray;
+    font-size: small;
+}
