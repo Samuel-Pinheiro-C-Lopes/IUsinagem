@@ -20,16 +20,22 @@
     [ngClass] = "{is_active: 'currentDisplay === `transition`'}"
 >
     <div id="box">
-        <p>I'm working</p>
-        <input type="text" class=" form-control"/>
-        <mat-form-field>
-            <mat-label>Testing</mat-label>
-            <mat-select [(value)] = "selected">
-                <mat-option [value] = "'aa'">Option I</mat-option>
-                <mat-option [value] = "'bb'">II Option</mat-option>
-                <mat-option [value] = "'cc'">Opt III ion</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <button>I'm a test button, whose relevance isn't precise or meaningful.</button>
+        <app-select 
+            [options] = "optionsNeeded"
+            [label] = "'Área da Usinagem.'"
+            (optionSelected) = "onOptionSelected($event)"
+        ></app-select>
     </div>
 </div>
+
+<app-calculum 
+    *ngFor = "let calc of calculumArr"
+    [calcType] = "calc"
+></app-calculum>
+<app-select
+    [label] = "'Adicionar novo âmbito de cálculo...'"
+    [options] = "optionsNeeded"
+    (optionSelected) = "onOptionSelected($event)"
+>
+</app-select>
+

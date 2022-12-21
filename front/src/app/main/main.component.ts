@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { MatSelect } from "@angular/material/select";
 
 @Component({
     selector: "app-main",
@@ -7,6 +6,11 @@ import { MatSelect } from "@angular/material/select";
     styleUrls: ["main.component.css"],
 })
 export class MainComponent {
+
+    optionsNeeded:string[] = ["Torneamento", "Fresamento", "Furação", "Rosqueamento"];
+
+    calculumArr:string[] = []
+
     contentType:number = 2;
 
     selected:string = "h1"
@@ -19,6 +23,11 @@ export class MainComponent {
 
     onDisplayChanged(display: {newDisplay: string}) {
         this.currentDisplay = display.newDisplay;
+    }
+
+    onOptionSelected (optionSelected: {option:string}) {
+        this.currentDisplay = 'none';
+        this.calculumArr.push(optionSelected.option);
     }
 
 }

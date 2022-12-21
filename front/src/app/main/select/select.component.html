@@ -1,0 +1,32 @@
+<div [ngSwitch]="options?.length">
+    <mat-form-field 
+        appearance="fill"
+        style="width: 80%; position: relative; left: 5%;"   
+        appearance = "outline"
+        *ngSwitchCase = "4"
+    >
+        <mat-label>{{label}}</mat-label>
+        <mat-select>
+            <mat-option 
+                *ngFor = "let option of options"
+                (click) = "onOptionSelection(option)"
+            >{{option}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field
+        *ngSwitchDefault
+        appearance="fill"
+        style="width: 80%; position: relative; left: 5%;"   
+        appearance = "outline"
+    >
+        <mat-label>{{label}}</mat-label>
+        <mat-select>
+            <mat-option
+                *ngFor = "let src of imgsSrcs"
+                (click) = "onOptionSelection(src)"
+            ><img src= {{src}} />
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

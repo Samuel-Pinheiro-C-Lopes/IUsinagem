@@ -1,0 +1,92 @@
+
+<h5>Fresamento</h5>
+
+<div 
+    *ngFor = "let formula of formulaArr"
+    [ngSwitch]="formula"
+    class="formulaBox"    
+>
+<!-- 'Velocidade de Corte, v(pés/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/0.jpg'">
+        <div class="row1">
+            <div class="col1">
+                <p>Vc = </p>
+            </div>
+            <div class="col2">
+                <div style="border-bottom: black 1px solid; padding-bottom: 1px">π x <input [(ngModel)] = "DCap" placeholder="DCap"/> + <input [(ngModel)] = "n" placeholder="n"/></div>
+                <div>12</div>
+            </div>
+            <div class="col3">
+                <button class="btn btn-success">Calculate</button>
+            </div>
+        </div>
+    </div>
+    <!-- 'Velocidade de Corte, v(m/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/1.jpg'">
+
+    </div>
+    <!-- 'Avanço por Rotação, f(pol./rot,)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/2.jpg'">
+
+    </div>
+    <!-- 'Avanço por Rotação, f(mm/rotação)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/3.jpg'">
+
+    </div>
+    <!-- 'Avanço por Dente, f(pol)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/4.jpg'">
+
+    </div>
+    <!-- 'Avanço por Dente, f(mm)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/5.jpg'">
+
+    </div>
+    <!-- 'Taxa de Remoção de Metal, Q (cm/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/6.jpg'">
+
+    </div>
+    <!-- 'Taxa de Remoção de Metal, Q (pol/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/7.jpg'">
+
+    </div>
+    <!-- 'Potência Líquida, P(HP)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/8.jpg'">
+
+    </div>
+    <!-- 'Potência Líquida, P(kW)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/9.jpg'">
+
+    </div>
+    <!-- 'Velocidade do Fuso, n (r/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/10.jpg'">
+
+    </div>
+    <!-- 'Velocidade do Fuso, n (rpm)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/11.jpg'">
+
+    </div>
+    <!-- 'Avanço de Mesa, v (pol/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/12.jpg'">
+
+    </div>
+    <!-- 'Avanço de Mesa, v (pol/min)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/13.jpg'">
+
+    </div>
+    <!-- 'Torque, M(lbf-pés)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/14.jpg'">
+
+    </div>
+    <!-- 'Torque, M (Nm)' -->
+    <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/15.jpg'">
+
+    </div>
+</div>
+
+<app-select
+    [label] = "'Adicionar nova Fórmula'"
+    [options] = "formulas"
+    (optionSelected) = "onOptionSelected($event)"
+></app-select>
+
+

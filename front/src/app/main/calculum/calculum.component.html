@@ -1,0 +1,9 @@
+<div 
+    [ngSwitch]="calcType"
+    class="calcBox"
+>
+    <app-torneamento *ngSwitchCase = "'Torneamento'"></app-torneamento>
+    <app-fresamento *ngSwitchCase = "'Fresamento'"></app-fresamento>
+    <app-furacao *ngSwitchCase = "'Furação'"></app-furacao>
+    <app-rosqueamento *ngSwitchCase = "'Rosqueamento'"></app-rosqueamento>
+</div>

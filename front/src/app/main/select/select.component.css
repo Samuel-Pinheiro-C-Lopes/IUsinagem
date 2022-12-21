@@ -1,0 +1,64 @@
+/* ::ng-deep .mat-focused .mat-form-field-label {
+    change color of label
+     color: green !important;
+} 
+*/
+
+/* ::ng-deep .mat-form-field-underline {
+    change color of underline
+    background-color: green !important;
+  } 
+*/
+
+
+/* ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgb(61, 61, 61)!important;
+    opacity: 0.5!important;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: red!important;
+} */
+
+
+/* ::ng-deep .mat-form-field-label {
+    color: gray!important;
+    opacity: 0.6!important;
+}
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: rgb(88, 88, 88)!important;
+    opacity: 1!important;
+} */
+
+/* ::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: rgb(0, 0, 0)!important;
+    opacity: 1!important;
+} */
+
+
+::ng-deep .mat-form-field-label {
+    color: gray!important;
+    opacity: 1!important;
+}
+
+::ng-deel .mat-form-field.mat-focused .mat-form-field-label {
+    color: rgb(88, 88, 88)!important;
+    opacity: 1!important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline{
+    color: gray!important;
+    opacity: 0.6!important;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick{
+    color: rgb(88, 88, 88)!important;
+    opacity: 0.8!important;
+}
+
+::ng-deep .mat-select-arrow {
+    color: rgb(88, 88, 88)!important;
+    opacity: 0.6!important;
+}
