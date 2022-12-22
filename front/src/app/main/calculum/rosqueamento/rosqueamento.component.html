@@ -1,1 +1,34 @@
-<div>rosqueamento</div>
+<h5>rosqueamento</h5>
+
+<div
+    *ngFor="let formula of formulaArr"
+    [ngSwitch]="formula"
+    class="formulaBox"
+>
+    <div *ngSwitchCase="'../../../assets/selectImgs/rosqueamento/0.jpg'">
+        <label>Penetração Radial, corte/passe</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "apx" placeholder="apx" disabled /> =
+            </div>
+            <div class="equation">
+                <div class="topLign">
+                    <input [(ngModel)] = "ap" placeholder="ap"/> x 
+                    √<input [(ngModel)] = "Y" placeholder="Y"/>
+                </div>
+                <div class="bottomLign">
+                    √<input [(ngModel)] = "nap" placeholder="nap"/> - 1
+                </div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(0)">Calcular</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-select
+    [label] = "'Adicionar nova Fórmula'"
+    [options] = "formulas"
+    (optionSelected) = "onOptionSelected($event)"
+></app-select>

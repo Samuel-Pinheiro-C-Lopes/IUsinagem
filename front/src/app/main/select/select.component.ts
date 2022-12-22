@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class SelectComponent implements OnInit {
 
-  imgsSrcs:string[] = [];
+  imgsSrcs:string[] = [];  
 
   @Input() label?:string;
 
@@ -31,7 +31,7 @@ export class SelectComponent implements OnInit {
 
     if (length === 1) {
       for (let i = 0; i < Number(length); i++) {
-          this.imgsSrcs.push(`../../../assets/selectImgs/fresamento/${i}.jpg`);
+          this.imgsSrcs.push(`../../../assets/selectImgs/rosqueamento/${i}.jpg`);
       }
     }else if(length === 16){
       for (let i = 0; i < Number(length); i++) {
@@ -39,11 +39,11 @@ export class SelectComponent implements OnInit {
       }
     }else if(length === 9){
       for (let i = 0; i < Number(length); i++) {
-          this.imgsSrcs.push(`../../../assets/selectImgs/fresamento/${i}.jpg`);
+          this.imgsSrcs.push(`../../../assets/selectImgs/torneamento/${i}.jpg`);
       }
     }else{
       for (let i = 0; i < Number(length); i++) {
-          this.imgsSrcs.push(`../../../assets/selectImgs/fresamento/${i}.jpg`);
+          this.imgsSrcs.push(`../../../assets/selectImgs/furacao/${i}.jpg`);
         }
     }
   }

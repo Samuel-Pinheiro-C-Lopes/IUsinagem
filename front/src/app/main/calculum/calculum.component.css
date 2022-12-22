@@ -6,3 +6,79 @@
     padding: 2%;
 }
 
+.formulaBox {
+    margin-bottom: 30px;
+}
+
+.formulaInput {
+    outline: none;
+    border: none;
+    border: solid rgba(128, 128, 128, 0.514) 0.5px;
+    width: 30px;
+}
+
+input {
+    outline: none;
+    border: 1px solid rgb(88, 88, 88);
+    width: 40px;
+}
+
+.formula {
+    width: 100%;
+    display: flex;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.value {
+    width: fit-content;
+}
+
+.equation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    max-width: 350px;
+}
+
+.equation .topLign {
+    width: 100%;
+    padding-bottom: 2px;
+    text-align: center;
+
+}
+
+.equation .topLign *{
+    margin: 0px 2% 0px 2%;    
+}
+
+.equation .bottomLign {
+    width: 100%;
+    padding-top: 2px;
+    text-align: center;
+    border-top: solid black 1px;
+}   
+
+
+.btnDiv {
+    width: fit-content;
+    margin-left: 5px;
+}
+
+.calcButton {
+    width: 65px;
+    background-color: rgb(5, 165, 5);
+    transition: all 1s;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.calcButton:hover {
+    background-color: rgb(3, 92, 3);
+}
+
+label {
+    margin-bottom: 20px;
+}

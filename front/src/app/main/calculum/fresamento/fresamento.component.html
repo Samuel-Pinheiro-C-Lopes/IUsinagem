@@ -8,78 +8,256 @@
 >
 <!-- 'Velocidade de Corte, v(pés/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/0.jpg'">
-        <div class="row1">
-            <div class="col1">
-                <p>Vc = </p>
+        <label>Velocidade de Corte, v(pés/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Vc" placeholder="Vc" disabled /> =
             </div>
-            <div class="col2">
-                <div style="border-bottom: black 1px solid; padding-bottom: 1px">π x <input [(ngModel)] = "DCap" placeholder="DCap"/> + <input [(ngModel)] = "n" placeholder="n"/></div>
-                <div>12</div>
+            <div class="equation">
+                <div class="topLign">π x <input [(ngModel)] = "DCap" placeholder="DCap"/> x <input [(ngModel)] = "n" placeholder="n"/></div>
+                <div class="bottomLign">12</div>
             </div>
-            <div class="col3">
-                <button class="btn btn-success">Calculate</button>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(0)">Calcular</button>
             </div>
         </div>
     </div>
     <!-- 'Velocidade de Corte, v(m/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/1.jpg'">
-
+        <label>Velocidade de Corte, v(m/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Vc" placeholder="Vc" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign">π x <input [(ngModel)] = "DCap" placeholder="DCap"/> x <input [(ngModel)] = "n" placeholder="n"/></div>
+                <div class="bottomLign">1000</div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(1)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Avanço por Rotação, f(pol./rot,)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/2.jpg'">
-
+        <label>Avanço por Rotação, f(pol./rot,)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Fn" placeholder="Fn" disabled /> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Vf" placeholder="Vf"/></div>
+                <div class="bottomLign"><input [(ngModel)] = "n" placeholder="n"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(2)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Avanço por Rotação, f(mm/rotação)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/3.jpg'">
-
+        <label>Avanço por Rotação, f(mm/rotação)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Fn" placeholder="Fn" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Vf" placeholder="Vf"/></div>
+                <div class="bottomLign"><input [(ngModel)] = "n" placeholder="n"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(3)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Avanço por Dente, f(pol)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/4.jpg'">
-
+        <label>Avanço por Dente, f(pol)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Fz" placeholder="Fz" disabled /> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Vf" placeholder="Vf"/></div>
+                <div class="bottomLign"><input [(ngModel)] = "n" placeholder="n"/> x <input [(ngModel)] = "ZEFF" placeholder="ZEFF"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(4)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Avanço por Dente, f(mm)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/5.jpg'">
-
+        <label>Avanço por Dente, f(mm)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Fz" placeholder="Fz" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Vf" placeholder="Vf"/></div>
+                <div class="bottomLign"><input [(ngModel)] = "n" placeholder="n"/> x <input [(ngModel)] = "ZEFF" placeholder="ZEFF"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(5)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Taxa de Remoção de Metal, Q (cm/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/6.jpg'">
-
+        <label>Taxa de Remoção de Metal, Q (cm/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Q" placeholder="Q" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "AP" placeholder="AP"/> x <input [(ngModel)] = "ae" placeholder="ae"/> x <input [(ngModel)] = "Vf" placeholder="Vf"/></div>
+                <div class="bottomLign">1000</div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(6)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Taxa de Remoção de Metal, Q (pol/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/7.jpg'">
-
+        <label>Taxa de Remoção de Metal, Q (pol/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Q" placeholder="Q" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "AP" placeholder="AP"/> x <input [(ngModel)] = "ae" placeholder="ae"/> x <input [(ngModel)] = "Vf" placeholder="Vf"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(7)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Potência Líquida, P(HP)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/8.jpg'">
-
+        <label>Potência Líquida, P(HP)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Pc" placeholder="Pc" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "ae" placeholder="ae"/> x <input [(ngModel)] = "AP" placeholder="AP"/> x <input [(ngModel)] = "Vf" placeholder="Vf"/> x <input [(ngModel)] = "Kc" placeholder="Kc"/></div>
+                <div class="bottomLign">396 x 10^3</div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(8)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Potência Líquida, P(kW)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/9.jpg'">
-
+        <label>Potência Líquida, P(kW)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Pc" placeholder="Pc" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "ae" placeholder="ae"/> x <input [(ngModel)] = "AP" placeholder="AP"/> x <input [(ngModel)] = "Vf" placeholder="Vf"/> x <input [(ngModel)] = "Kc" placeholder="Kc"/></div>
+                <div class="bottomLign">60 x 10^6</div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(9)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Velocidade do Fuso, n (r/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/10.jpg'">
-
+        <label>Velocidade do Fuso, n (r/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "n" placeholder="n" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Vc" placeholder="Vc"/> x 1000</div>
+                <div class="bottomLign">π x <input [(ngModel)]="DCap" placeholder="DCap"></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(10)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Velocidade do Fuso, n (rpm)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/11.jpg'">
-
+        <label>Velocidade do Fuso, n (rpm)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "n" placeholder="n" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Vc" placeholder="Vc"/> x 12</div>
+                <div class="bottomLign">π x <input [(ngModel)]="DCap" placeholder="DCap"></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(11)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Avanço de Mesa, v (pol/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/12.jpg'">
-
+        <label>Avanço de Mesa, v (pol/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Vf" placeholder="Vf" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Fz" placeholder="Fz"/> x <input [(ngModel)] = "n" placeholder="n"/> x <input [(ngModel)] = "ZEFF" placeholder="ZEFF"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(12)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Avanço de Mesa, v (pol/min)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/13.jpg'">
-
+        <label>Avanço de Mesa, v (mm/min)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Vf" placeholder="Vf" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Fz" placeholder="Fz"/> x <input [(ngModel)] = "n" placeholder="n"/> x <input [(ngModel)] = "ZEFF" placeholder="ZEFF"/></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(13)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Torque, M(lbf-pés)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/14.jpg'">
-
+        <label>Torque, M(lbf-pés)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Mc" placeholder="Mc" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Pc" placeholder="Pc"/> x 16501</div>
+                <div class="bottomLign">π x <input [(ngModel)]="n" placeholder="n"></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(14)">Calcular</button>
+            </div>
+        </div>
     </div>
     <!-- 'Torque, M (Nm)' -->
     <div *ngSwitchCase = "'../../../assets/selectImgs/fresamento/15.jpg'">
-
+        <label>Torque, M (Nm)</label>
+        <div class="formula">
+            <div class="value">
+                <input [(ngModel)] = "Mc" placeholder="Mc" disabled/> =
+            </div>
+            <div class="equation">
+                <div class="topLign"><input [(ngModel)] = "Pc" placeholder="Pc"/> x 30 x 10^3</div>
+                <div class="bottomLign">π x <input [(ngModel)]="n" placeholder="n"></div>
+            </div>
+            <div class="btnDiv">
+                <button class="calcButton" (click) = "calculator(15)">Calcular</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -88,5 +266,4 @@
     [options] = "formulas"
     (optionSelected) = "onOptionSelected($event)"
 ></app-select>
-
 

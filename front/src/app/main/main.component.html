@@ -1,41 +1,47 @@
-<!-- <app-menu (contentToggled) = "onContentToggled($event)"></app-menu>
-<div 
-    [ngSwitch]="currentContent"
->
-    <app-home *ngSwitchCase="'home'"></app-home>
-    <app-geral *ngSwitchCase="'geral'">Geral</app-geral>
-    <app-fresamento *ngSwitchCase = "'fresamento'">Fresamento</app-fresamento>
-    <app-torneamento *ngSwitchCase = "'torneamento'">Torneamento</app-torneamento>
-    <app-rosqueamento *ngSwitchCase = "'rosqueamento'">Rosqueamento</app-rosqueamento>
-    <div *ngSwitchDefault></div>
-</div> -->
+<div style="text-align:center; margin: 2%;">
 
-<app-home
-    (displayChanged) = "onDisplayChanged($event)"
-    *ngIf = "currentDisplay === 'home' || currentDisplay === 'transition'"
-></app-home>
-<div 
-    id="transition"
-    *ngIf = "currentDisplay === 'transition'"
-    [ngClass] = "{is_active: 'currentDisplay === `transition`'}"
->
-    <div id="box">
-        <app-select 
-            [options] = "optionsNeeded"
-            [label] = "'Área da Usinagem.'"
-            (optionSelected) = "onOptionSelected($event)"
-        ></app-select>
+    <!-- THAT IS A TEST, DON'T UNCOMMENT! -->
+    <!-- <app-menu (contentToggled) = "onContentToggled($event)"></app-menu>
+    <div 
+        [ngSwitch]="currentContent"
+    >
+        <app-home *ngSwitchCase="'home'"></app-home>
+        <app-geral *ngSwitchCase="'geral'">Geral</app-geral>
+        <app-fresamento *ngSwitchCase = "'fresamento'">Fresamento</app-fresamento>
+        <app-torneamento *ngSwitchCase = "'torneamento'">Torneamento</app-torneamento>
+        <app-rosqueamento *ngSwitchCase = "'rosqueamento'">Rosqueamento</app-rosqueamento>
+        <div *ngSwitchDefault></div>
+    </div> -->
+
+    <app-home
+        (displayChanged) = "onDisplayChanged($event)"
+        *ngIf = "currentDisplay === 'home' || currentDisplay === 'transition'"
+    ></app-home>
+    <div 
+        id="transition"
+        *ngIf = "currentDisplay === 'transition'"
+        [ngClass] = "{is_active: 'currentDisplay === `transition`'}"
+    >
+        <div id="box">
+            <app-select 
+                [options] = "optionsNeeded"
+                [label] = "'Área da Usinagem.'"
+                (optionSelected) = "onOptionSelected($event)"
+            ></app-select>
+        </div>
     </div>
+
+    <app-calculum 
+        *ngFor = "let calc of calculumArr"
+        [calcType] = "calc"
+    ></app-calculum>
+    <app-select
+        *ngIf = "currentDisplay === 'none'"
+        [label] = "'Adicionar novo âmbito de cálculo...'"
+        [options] = "optionsNeeded"
+        (optionSelected) = "onOptionSelected($event)"
+    >
+    </app-select>
 </div>
 
-<app-calculum 
-    *ngFor = "let calc of calculumArr"
-    [calcType] = "calc"
-></app-calculum>
-<app-select
-    [label] = "'Adicionar novo âmbito de cálculo...'"
-    [options] = "optionsNeeded"
-    (optionSelected) = "onOptionSelected($event)"
->
-</app-select>
 
