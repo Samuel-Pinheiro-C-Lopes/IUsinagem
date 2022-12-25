@@ -10,6 +10,11 @@
     margin-bottom: 30px;
 }
 
+.x-button {
+    height: 60px;
+    width: 60px;
+}
+
 .formulaInput {
     outline: none;
     border: none;
@@ -81,4 +86,32 @@ input {
 
 label {
     margin-bottom: 20px;
+}
+
+.close {
+    width: 30px;
+    position: absolute;
+    right: 10%;
+
+    outline: none;
+}
+
+.close::after, .close::before  {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 5px 0px 5px 0px;
+
+    background-color: black;
+    content: '';
+    
+
+}
+
+.close::after {
+    transform: rotate(45deg) translate(3px, -10px);
+}
+
+.close::before {
+    transform: rotate(-45deg) translate(3px, 10px);
 }

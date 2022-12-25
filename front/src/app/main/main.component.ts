@@ -30,4 +30,10 @@ export class MainComponent {
         this.calculumArr.push(optionSelected.option);
     }
 
+    onComponentDeleted (i: {index?:number}) {
+        if (typeof i.index === "number") {
+            this.calculumArr.splice(i.index, 1)
+        }
+    }
+
 }

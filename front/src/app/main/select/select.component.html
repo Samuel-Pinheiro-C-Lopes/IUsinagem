@@ -1,7 +1,9 @@
-<div [ngSwitch]="options?.length">
+<div 
+    [ngSwitch]="options?.length"
+>
     <mat-form-field 
         appearance="fill"
-        style="width: 80%; position: relative; left: 5%;"   
+        style="width: 80%; position: relative;"   
         appearance = "outline"
         *ngSwitchCase = "4"
     >
@@ -17,7 +19,7 @@
     <mat-form-field
         *ngSwitchDefault
         appearance="fill"
-        style="width: 80%; position: relative; left: 5%;"   
+        style="width: 80%; position: relative;"   
         appearance = "outline"
     >
         <mat-label>{{label}}</mat-label>

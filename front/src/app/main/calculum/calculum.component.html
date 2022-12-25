@@ -2,8 +2,28 @@
     [ngSwitch]="calcType"
     class="calcBox"
 >
-    <app-torneamento *ngSwitchCase = "'Torneamento'"></app-torneamento>
-    <app-fresamento *ngSwitchCase = "'Fresamento'"></app-fresamento>
-    <app-furacao *ngSwitchCase = "'Furação'"></app-furacao>
-    <app-rosqueamento *ngSwitchCase = "'Rosqueamento'"></app-rosqueamento>
+    <div 
+        class="close"
+        (click) = "componentDeletion(calcIndex)"    
+    >
+        <div class="bar"></div>
+    </div>
+    <app-torneamento
+        [calcIndex] = "calcIndex" 
+        *ngSwitchCase = "'Torneamento'"
+    ></app-torneamento>
+    <app-fresamento
+        [calcIndex] = "calcIndex" 
+        *ngSwitchCase = "'Fresamento'"
+    ></app-fresamento>
+    <app-furacao
+        [calcIndex] = "calcIndex" 
+        *ngSwitchCase = "'Furação'"
+    >
+    </app-furacao>
+    <app-rosqueamento
+        [calcIndex] = "calcIndex"   
+        *ngSwitchCase = "'Rosqueamento'"
+    >       
+    </app-rosqueamento>
 </div>

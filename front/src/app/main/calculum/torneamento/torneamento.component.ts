@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-torneamento',
@@ -7,7 +7,16 @@ import { Component } from '@angular/core';
 })
 export class TorneamentoComponent {
 
+  @Input() calcIndex?:number;
   formulaArr:string[] = [];
+
+  getCalcNumber(index:number|undefined) {
+    if (typeof index === "number") {
+      return index + 1;
+    }else{
+      return "ERROR";
+    }
+  }
 
   formulas:string[] = ["Velocidade de corte vc (m/min)", "Velocidade de corte vc (pés/min)", 
   "Velocidade de corte vc (pés/min)", "Velocidade do fuso n (rpm)", "Taxa de remoção de metal Q (cm3/min)", 

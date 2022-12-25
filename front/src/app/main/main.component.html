@@ -13,7 +13,8 @@
         <div *ngSwitchDefault></div>
     </div> -->
 
-    <app-home
+
+    <!-- <app-home
         (displayChanged) = "onDisplayChanged($event)"
         *ngIf = "currentDisplay === 'home' || currentDisplay === 'transition'"
     ></app-home>
@@ -23,20 +24,22 @@
         [ngClass] = "{is_active: 'currentDisplay === `transition`'}"
     >
         <div id="box">
+            <p>Escolha a área de atuação de usinagem do seu primeiro âmbito de cálculo.</p>
             <app-select 
                 [options] = "optionsNeeded"
                 [label] = "'Área da Usinagem.'"
                 (optionSelected) = "onOptionSelected($event)"
             ></app-select>
         </div>
-    </div>
+    </div> -->
 
     <app-calculum 
-        *ngFor = "let calc of calculumArr"
+        *ngFor = "let calc of calculumArr; let i = index"
+        (componentDeleted) = "onComponentDeleted($event)"
         [calcType] = "calc"
+        [calcIndex] = "i"
     ></app-calculum>
     <app-select
-        *ngIf = "currentDisplay === 'none'"
         [label] = "'Adicionar novo âmbito de cálculo...'"
         [options] = "optionsNeeded"
         (optionSelected) = "onOptionSelected($event)"
@@ -44,4 +47,5 @@
     </app-select>
 </div>
 
+<!-- *ngIf = "currentDisplay === 'none'" -->
 

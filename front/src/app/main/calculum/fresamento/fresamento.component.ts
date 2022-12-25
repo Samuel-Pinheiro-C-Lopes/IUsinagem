@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fresamento',
@@ -7,7 +7,16 @@ import { Component } from '@angular/core';
 })
 export class FresamentoComponent {
 
+  @Input() calcIndex?:number;
   formulaArr:string[] = [];
+
+  getCalcNumber(index:number|undefined) {
+    if (typeof index === "number") {
+      return index + 1;
+    }else{
+      return "ERROR";
+    }
+  }
 
 
   //length = 15

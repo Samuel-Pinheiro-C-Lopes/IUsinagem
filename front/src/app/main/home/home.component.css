@@ -1,14 +1,83 @@
+.content {
+    margin: 2%;
+}
+
 .start-btn {
     outline: none;
     border: none;
     border-radius: 5px;
     background-color: rgb(52, 212, 52);
     color: rgb(255, 255, 255);
-    width: 50px;
-    height: 40px;
     text-align: center;
     transition: all 1s;
     margin: 20px 0 20px 0;
+}
+
+.complementText p {
+    color: black;
+    opacity: 0.7;
+}
+
+@Media only screen and (min-width: 800px) {
+
+    * {
+        font-size: 17px;
+    }
+
+    .start-btn {
+        width: 100px;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    .complementText p {
+        font-size: 15px;
+    }
+
+    .complementText p strong {
+        font-size: 16px;
+    }
+}
+
+@Media only screen and (max-width: 800px) and (min-width: 351px){
+
+    * {
+        font-size: 15px;
+    }
+
+    .start-btn {
+        width: 70px;
+        height: 40px;
+    }
+
+    .complementText p {
+        font-size: 12px;
+    }
+
+    .complementText p strong {
+        font-size: 13px;
+    }
+}
+
+@Media only screen and (max-width: 350px) {
+
+    * {
+        font-size: 10px;
+    }
+
+    .start-btn {
+        width: 50px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .complementText p {
+        font-size: 7px;
+    }
+
+    .complementText p strong {
+        font-size: 9px;
+    }
 }
 
 .start-btn:hover {

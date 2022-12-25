@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-furacao',
@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
     styleUrls: ['../calculum.component.css']
 })
 export class FuracaoComponent {
+
+    @Input() calcIndex?:number;
+
+    getCalcNumber(index:number|undefined) {
+        if (typeof index === "number") {
+          return index + 1;
+        }else{
+          return "ERROR";
+        }
+      }
 
     //Length = 19;
     formulas:string[] = ["Velocidade de Corte, (Vc) m/min", "Velocidade de corte, (vc) pés/min", 

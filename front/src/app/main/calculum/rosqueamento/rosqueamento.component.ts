@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: "app-rosqueamento",
@@ -7,7 +7,16 @@ import { Component } from "@angular/core";
 })
 export class RosqueamentoComponent {
 
+    @Input() calcIndex?:number;    
     formulaArr:string[] = [];
+
+    getCalcNumber(index:number|undefined) {
+        if (typeof index === "number") {
+            return index + 1;
+        }else{
+            return "ERROR";
+        }
+    };
 
     formulas:string[] = ["Penetração Radial, corte/passe"];
 
