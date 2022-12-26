@@ -17,6 +17,11 @@ export class MainComponent {
 
     currentDisplay:string = 'home';
 
+    returnHome() {
+        this.currentDisplay = "home";
+        this.calculumArr.splice(0, this.calculumArr.length)
+    }
+
     onContentToggled(text: { textContent: string }) {
         this.currentDisplay = text.textContent;
     }

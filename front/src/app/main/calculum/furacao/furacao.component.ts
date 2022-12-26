@@ -17,6 +17,11 @@ export class FuracaoComponent {
         }
       }
 
+      deleteFormula(num: number) {
+        this.formulaArr.splice(num, 1);
+      }
+    
+
     //Length = 19;
     formulas:string[] = ["Velocidade de Corte, (Vc) m/min", "Velocidade de corte, (vc) pés/min", 
     "Velocidade do fuso, (n) rpm", "	Velocidade do fuso, (n) rpm", "Taxa de penetração, (vf) m/min", 

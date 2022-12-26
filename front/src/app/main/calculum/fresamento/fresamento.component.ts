@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fresamento',
   templateUrl: './fresamento.component.html',
   styleUrls: ['../calculum.component.css']
 })
-export class FresamentoComponent {
+export class FresamentoComponent implements OnInit {
 
   @Input() calcIndex?:number;
   formulaArr:string[] = [];
@@ -16,6 +16,10 @@ export class FresamentoComponent {
     }else{
       return "ERROR";
     }
+  }
+
+  deleteFormula(num: number) {
+    this.formulaArr.splice(num, 1);
   }
 
 
@@ -45,6 +49,10 @@ export class FresamentoComponent {
   onOptionSelected (optionSelected: {option:string}) {
     this.formulaArr.push(optionSelected.option);
 }
+
+  ngOnInit(): void {
+
+  }
 
   calculator (num:number) {
     if (num === 0) {

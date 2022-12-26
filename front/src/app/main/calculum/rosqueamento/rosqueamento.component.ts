@@ -18,6 +18,11 @@ export class RosqueamentoComponent {
         }
     };
 
+    deleteFormula(num: number) {
+        this.formulaArr.splice(num, 1);
+      }
+    
+
     formulas:string[] = ["Penetração Radial, corte/passe"];
 
     apx?: number;

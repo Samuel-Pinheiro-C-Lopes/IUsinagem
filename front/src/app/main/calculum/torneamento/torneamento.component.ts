@@ -18,6 +18,11 @@ export class TorneamentoComponent {
     }
   }
 
+  deleteFormula(num: number) {
+    this.formulaArr.splice(num, 1);
+  }
+
+
   formulas:string[] = ["Velocidade de corte vc (m/min)", "Velocidade de corte vc (pés/min)", 
   "Velocidade de corte vc (pés/min)", "Velocidade do fuso n (rpm)", "Taxa de remoção de metal Q (cm3/min)", 
   "Taxa de remoção de metal Q (pol3/min)", "Potência líquida Pc (kW)", "Potência líquida Pc (HP)", 

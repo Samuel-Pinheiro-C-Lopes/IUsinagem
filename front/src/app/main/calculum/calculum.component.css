@@ -4,15 +4,12 @@
     height: fit-content;
     margin: 2%;
     padding: 2%;
+    width: 100%;
 }
 
 .formulaBox {
     margin-bottom: 30px;
-}
-
-.x-button {
-    height: 60px;
-    width: 60px;
+    width: 100%;
 }
 
 .formulaInput {
@@ -38,16 +35,27 @@ input {
 
 .value {
     width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.value input {
+    margin-right: 5px;
 }
 
 .equation {
-    display: flex;
-    flex-wrap: wrap;
-    width: 75%;
-    max-width: 350px;
+    display: inline-block;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    max-width: 1000px;
+    margin-left: 5px;
 }
 
 .equation .topLign {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding-bottom: 2px;
     text-align: center;
@@ -59,6 +67,7 @@ input {
 }
 
 .equation .bottomLign {
+    display: block;
     width: 100%;
     padding-top: 2px;
     text-align: center;
@@ -67,17 +76,20 @@ input {
 
 
 .btnDiv {
+    width: 20%;
+    display: inline-block;
     width: fit-content;
     margin-left: 5px;
 }
 
 .calcButton {
-    width: 65px;
+    width: 75px;
     background-color: rgb(5, 165, 5);
     transition: all 1s;
     color: white;
     border: none;
     border-radius: 5px;
+    padding: 2px 1px 2px 1px;
 }
 
 .calcButton:hover {
@@ -114,4 +126,45 @@ label {
 
 .close::before {
     transform: rotate(-45deg) translate(3px, 10px);
+}
+
+
+.closeFormula {
+    width: 20px;
+    position: absolute;
+    right: 12%;
+
+    outline: none;
+}
+
+.closeFormula::after, .closeFormula::before  {
+    display: block;
+    width: 100%;
+    height: 4.5px;
+    margin: 4.5px 0px 4.5px 0px;
+
+    background-color: rgb(199, 199, 199);
+    content: '';
+
+}
+
+.closeFormula:hover {
+    cursor: pointer;
+}
+
+.closeFormula::after {
+    transform: rotate(45deg) translate(0px, -9px);
+}
+
+.closeFormula::before {
+    transform: rotate(-45deg) translate(3px, 6.5px);
+}
+
+.closeFormula:hover.closeFormula::after  {
+    background-color: rgb(137, 137, 137);
+
+}
+
+.closeFormula:hover.closeFormula::before  {
+    background-color: rgb(137, 137, 137);
 }

@@ -1,10 +1,16 @@
 <h5>Furação Nº {{getCalcNumber(calcIndex)}}</h5>
 
 <div 
-    *ngFor = "let formula of formulaArr"
+    *ngFor = "let formula of formulaArr; let i = index"
     [ngSwitch]="formula"
     class="formulaBox"
 >
+    <div 
+        class="closeFormula"
+        (click) = "deleteFormula(i)"
+    >
+        <div></div>
+    </div>
     <div *ngSwitchCase="'../../../assets/selectImgs/furacao/0.jpg'">
         <label>Velocidade de Corte, v(m/min)</label>
         <div class="formula">
@@ -313,7 +319,7 @@
 </div>
 
 <app-select
-    [label] = "'Adicionar nova Fórmula'"
+    [label] = "'Adicionar nova Fórmula...'"
     [options] = "formulas"
     (optionSelected) = "onOptionSelected($event)"
 ></app-select>

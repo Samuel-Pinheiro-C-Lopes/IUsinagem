@@ -14,7 +14,7 @@
     </div> -->
 
 
-    <!-- <app-home
+    <app-home
         (displayChanged) = "onDisplayChanged($event)"
         *ngIf = "currentDisplay === 'home' || currentDisplay === 'transition'"
     ></app-home>
@@ -31,8 +31,17 @@
                 (optionSelected) = "onOptionSelected($event)"
             ></app-select>
         </div>
-    </div> -->
+    </div>
 
+
+    <div 
+        class="arrow-container"
+        (click) = "returnHome()"
+        *ngIf = "currentDisplay === 'none'"    
+    >
+        <div class="arrow"></div>
+        <p>voltar</p>
+    </div>
     <app-calculum 
         *ngFor = "let calc of calculumArr; let i = index"
         (componentDeleted) = "onComponentDeleted($event)"
@@ -40,12 +49,11 @@
         [calcIndex] = "i"
     ></app-calculum>
     <app-select
+        *ngIf = "currentDisplay === 'none'"
         [label] = "'Adicionar novo âmbito de cálculo...'"
         [options] = "optionsNeeded"
         (optionSelected) = "onOptionSelected($event)"
     >
     </app-select>
 </div>
-
-<!-- *ngIf = "currentDisplay === 'none'" -->
 

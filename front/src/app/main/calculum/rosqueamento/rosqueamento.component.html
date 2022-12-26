@@ -1,10 +1,16 @@
 <h5>rosqueamento Nº {{getCalcNumber(calcIndex)}}</h5>
 
 <div
-    *ngFor="let formula of formulaArr"
+    *ngFor="let formula of formulaArr; let i = index"
     [ngSwitch]="formula"
     class="formulaBox"
 >
+    <div 
+    class="closeFormula"
+    (click) = "deleteFormula(i)"
+    >
+    <div></div>
+    </div>
     <div *ngSwitchCase="'../../../assets/selectImgs/rosqueamento/0.jpg'">
         <label>Penetração Radial, corte/passe</label>
         <div class="formula">
@@ -28,7 +34,7 @@
 </div>
 
 <app-select
-    [label] = "'Adicionar nova Fórmula'"
+    [label] = "'Adicionar nova Fórmula...'"
     [options] = "formulas"
     (optionSelected) = "onOptionSelected($event)"
 ></app-select>
